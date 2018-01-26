@@ -8,6 +8,12 @@
   <sprites name="sprites"/>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_get_input.gml</script>
+  </scripts>
+  <objects name="objects">
+    <object>objects\obj_input</object>
+  </objects>
   <help>
     <rtf>help.rtf</rtf>
   </help>
