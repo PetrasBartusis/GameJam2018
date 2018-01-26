@@ -28,8 +28,9 @@
             <string>///Create the player object
 spd = 5;
 
-acSpeed=0.2; // akceleracijos greitis;
-maxSpeed=10;  // maximalus greitis
+acSpeed=0.5; // Acceleration speed
+maxSpeed=10;  // Maximum speed
+friction=0.1 // I won't explain this one. 
 </string>
           </argument>
         </arguments>
