@@ -30,7 +30,8 @@ spd = 5;
 
 acSpeed=0.5; // Acceleration speed
 maxSpeed=10;  // Maximum speed
-friction=0.1 // I won't explain this one. 
+friction=0.1; // I won't explain this one. 
+hp=100;
 </string>
           </argument>
         </arguments>
@@ -78,7 +79,7 @@ if keyboard_check(ord("D")) {
 hspeed+=acSpeed;
 if speed &gt; maxSpeed speed-=acSpeed;
 }
-
+hp-=1; //TODO: dificulty- e=1, m=2, h=3; Room ends in about 25s
 scr_camera_movement();
 
 
