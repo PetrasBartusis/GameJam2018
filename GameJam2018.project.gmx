@@ -14,6 +14,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_get_input.gml</script>
+    <script>scripts\scr_camera_movement.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_input</object>
