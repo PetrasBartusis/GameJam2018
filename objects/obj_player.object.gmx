@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>///Create the player object
 spd = 5;
+
+acSpeed=0.2; // akceleracijos greitis;
+maxSpeed=10;  // maximalus greitis
 </string>
           </argument>
         </arguments>
@@ -49,7 +52,8 @@ spd = 5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Move the player
+            <string>/*
+///Move the player
 if(instance_exists(obj_input)){
     if(obj_input.right_key)
         x+=spd;
@@ -60,6 +64,28 @@ if(instance_exists(obj_input)){
     if(obj_input.down_key)
         y+=spd;
 }
+
+*/
+
+// JUDESIUKAS
+
+if keyboard_check(ord("A")) {
+hspeed-=acSpeed;
+if speed &gt; maxSpeed speed-=acSpeed;
+}
+if keyboard_check(ord("D")) {
+hspeed+=acSpeed;
+if speed &gt; maxSpeed speed-=acSpeed;
+}
+
+
+
+
+
+
+
+
+
 </string>
           </argument>
         </arguments>
