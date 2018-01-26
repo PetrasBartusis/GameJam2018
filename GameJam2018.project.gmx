@@ -10,18 +10,29 @@
     <sprite>sprites\sprite1</sprite>
     <sprite>sprites\spr_glow</sprite>
     <sprite>sprites\spr_solid_ground</sprite>
+    <sprite>sprites\spr_enemy</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_get_input.gml</script>
     <script>scripts\scr_camera_movement.gml</script>
+    <script>scripts\scr_flicker_light.gml</script>
+    <scripts name="enemyScripts">
+      <script>scripts\scr_enemy_idle_state.gml</script>
+      <script>scripts\scr_check_for_player.gml</script>
+      <script>scripts\scr_enemy_choose_next_state.gml</script>
+      <script>scripts\scr_enemy_wander_state.gml</script>
+      <script>scripts\scr_move_axis.gml</script>
+      <script>scripts\scr_enemy_chase_state.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_input</object>
     <object>objects\obj_player</object>
     <object>objects\obj_night</object>
     <object>objects\obj_solid_ground</object>
+    <object>objects\obj_enemy</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
