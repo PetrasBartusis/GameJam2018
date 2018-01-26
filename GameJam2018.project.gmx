@@ -9,6 +9,7 @@
     <sprite>sprites\spr_ground</sprite>
     <sprite>sprites\sprite1</sprite>
     <sprite>sprites\spr_glow</sprite>
+    <sprite>sprites\spr_solid_ground</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -20,6 +21,7 @@
     <object>objects\obj_input</object>
     <object>objects\obj_player</object>
     <object>objects\obj_night</object>
+    <object>objects\obj_solid_ground</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
