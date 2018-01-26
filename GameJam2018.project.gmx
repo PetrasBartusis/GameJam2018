@@ -26,6 +26,7 @@
       <script>scripts\scr_move_axis.gml</script>
       <script>scripts\scr_enemy_chase_state.gml</script>
     </scripts>
+    <script>scripts\empty_script_test.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_input</object>
