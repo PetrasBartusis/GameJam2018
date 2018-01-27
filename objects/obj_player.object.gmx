@@ -34,6 +34,11 @@ friction=0.5 // I won't explain this one.
 playerGravity=0 // If = 0 player is in the air
 glow_size = 1;
 hp=100;
+movement = IDLE;
+/*sprites[IDLE]
+sprites[MOVE]
+sprites[JUMP]
+*/
 </string>
           </argument>
         </arguments>
@@ -56,7 +61,9 @@ hp=100;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hp-=1; //TODO: dificulty- e=1, m=2, h=3; Room ends in about 25s
+            <string>if(hp&gt;0){ 
+    hp-=1; //TODO: dificulty- e=1, m=2, h=3; Room ends in about 25s
+}
 glow_size=hp/100
 </string>
           </argument>
@@ -98,13 +105,15 @@ if(instance_exists(obj_input)){
 
 // movement and jump
 
-if keyboard_check(ord("A")) {
-hspeed-=acSpeed;
-if speed &gt; maxSpeed speed-=acSpeed;
-}
-if keyboard_check(ord("D")) {
-hspeed+=acSpeed;
-if speed &gt; maxSpeed speed-=acSpeed;
+if(instance_exists(obj_input)){
+    if obj_input.left_key {
+    hspeed-=acSpeed;
+    if speed &gt; maxSpeed speed-=acSpeed;
+    }
+    if obj_input.right_key {
+    hspeed+=acSpeed;
+    if speed &gt; maxSpeed speed-=acSpeed;
+    }
 }
 
 if (alarm[0] &lt;= 0){
