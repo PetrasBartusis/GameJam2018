@@ -9,4 +9,10 @@ var hspd = lengthdir_x(spd, dir);
     image_xscale = sign(hspd);
 }*/
 //move enemy object
-x += hspd;
+if(speed<=4){ 
+    hspeed += hspd/10; 
+    if(speed>4){ 
+        hspeed -= hspd/10; 
+    } 
+} 
+ 
