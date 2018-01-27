@@ -92,11 +92,14 @@
     <room>rooms\win_game</room>
     <room>rooms\game</room>
   </rooms>
-  <constants number="4">
+  <constants number="7">
     <constant name="IDLE">0</constant>
     <constant name="MOVE">1</constant>
     <constant name="JUMP">2</constant>
     <constant name="CROUCH">3</constant>
+    <constant name="LIGHT_0">0</constant>
+    <constant name="LIGHT_1">1</constant>
+    <constant name="LIGHT_2">2</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
