@@ -20,7 +20,7 @@
   <width>26</width>
   <height>60</height>
   <frames>
-    <frame index="0">images\spr_player_jump_0.png</frame>
-    <frame index="1">images\spr_player_jump_1.png</frame>
+    <frame index="0">images\spr_player_jump_2_0.png</frame>
+    <frame index="1">images\spr_player_jump_2_1.png</frame>
   </frames>
 </sprite>
