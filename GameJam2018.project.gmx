@@ -29,6 +29,7 @@
     <sprite>sprites\spr_player_crouch</sprite>
     <sprite>sprites\spr_bonfire_on</sprite>
     <sprite>sprites\spr_bonfire_off</sprite>
+    <sprite>sprites\spr_house</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mntn</background>
@@ -73,6 +74,7 @@
       <object>objects\obj_hard</object>
     </objects>
     <object>objects\obj_bonfire</object>
+    <object>objects\obj_house</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\menu</room>
