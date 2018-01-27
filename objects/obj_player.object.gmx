@@ -265,7 +265,9 @@ if(hspeed != 0){
 
 //move the backgrounds (parallax)
 background_x[0] = view_xview/1.2;
-background_x[1] = view_xview/1.3
+background_x[1] = view_xview/1.3;
+background_x[2] = view_xview/1.4;
+background_x[3] = view_xview/1.5;
 
 </string>
           </argument>
