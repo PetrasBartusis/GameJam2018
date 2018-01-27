@@ -11,12 +11,17 @@
     <sprite>sprites\spr_glow</sprite>
     <sprite>sprites\spr_solid_ground</sprite>
     <sprite>sprites\spr_enemy</sprite>
+    <sprite>sprites\spr_enemy_idle</sprite>
+    <sprite>sprites\spr_bat</sprite>
     <sprite>sprites\spr_button</sprite>
     <sprite>sprites\spr_sky</sprite>
     <sprite>sprites\spr_tree</sprite>
+    <sprite>sprites\spr_tree2</sprite>
     <sprite>sprites\spr_bush</sprite>
-    <sprite>sprites\sprite11</sprite>
+    <sprite>sprites\spr_bush3</sprite>
+    <sprite>sprites\spr_bush4</sprite>
     <sprite>sprites\spr_bush2</sprite>
+    <sprite>sprites\sprite14</sprite>
     <sprite>sprites\sprite12</sprite>
     <sprite>sprites\spr_player_move</sprite>
     <sprite>sprites\spr_player_jump</sprite>
@@ -28,6 +33,8 @@
     <background>background\bg_mntn</background>
     <background>background\bg_sky</background>
     <background>background\bg_gr</background>
+    <background>background\bg_trees</background>
+    <background>background\bg_bushes</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
