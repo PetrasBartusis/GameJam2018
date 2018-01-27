@@ -1,9 +1,10 @@
 ///scr_move_axis
 
 //get a direction
-var dir = point_direction(0, 0, xaxis, 0);
+var dir = point_direction(0, 0, xaxis, yaxis);
 //get directional speed
 var hspd = lengthdir_x(spd, dir);
+var vspd = lengthdir_y(spd, dir);
 //turn the enemy towards the player and check if it's not 0
 /*if(hspd != 0){
     image_xscale = sign(hspd);
@@ -14,5 +15,18 @@ if(speed<=4){
     if(speed>4){ 
         hspeed -= hspd/10; 
     } 
-} 
+}
+if(name == "bat"){
+    if(speed<=4){ 
+        vspeed += vspd/10; 
+        if(speed>4){ 
+            vspeed -= vspd/10;
+        } 
+    }
+    if(y>room_height/2+150){
+        y=room_height/2+150;
+        vspeed = 0;
+        shouldFlyUp = true;
+    }
+}
  

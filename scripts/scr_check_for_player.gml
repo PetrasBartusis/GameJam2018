@@ -5,6 +5,9 @@ if(instance_exists(obj_player)){
         state = scr_enemy_chase_state;
         var dir = point_direction(x, y, obj_player.x, obj_player.y);
         xaxis = lengthdir_x(1, dir);
+        if(name == "bat"){
+            yaxis = lengthdir_y(1, dir);
+        }
     } else {
         scr_enemy_choose_next_state();
     }

@@ -11,6 +11,7 @@
     <sprite>sprites\spr_glow</sprite>
     <sprite>sprites\spr_solid_ground</sprite>
     <sprite>sprites\spr_enemy</sprite>
+    <sprite>sprites\spr_bat</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -34,6 +35,7 @@
     <object>objects\obj_night</object>
     <object>objects\obj_solid_ground</object>
     <object>objects\obj_enemy</object>
+    <object>objects\obj_bat</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

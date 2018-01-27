@@ -30,8 +30,10 @@ image_speed = .1;
 spd = 6;
 state = scr_enemy_idle_state;
 alarm[0] = room_speed*irandom_range(2,5);
-sight = 360;
+sight = 300;
 xaxis = 0;
+yaxis = 0;
+name = "wolf";
 </string>
           </argument>
         </arguments>
