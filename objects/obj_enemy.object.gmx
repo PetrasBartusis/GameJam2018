@@ -34,6 +34,9 @@ sight = 300;
 xaxis = 0;
 yaxis = 0;
 name = "wolf";
+enemyGravity=0 // gravity
+xoffset=25;
+yoffset=25;
 </string>
           </argument>
         </arguments>
@@ -86,7 +89,7 @@ name = "wolf";
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="3" enumb="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -105,6 +108,53 @@ name = "wolf";
             <kind>1</kind>
             <string>/// Run current state
 script_execute(state);
+
+
+
+if name = "wolf" {
+
+    // gravity
+
+    if enemyGravity = 0 { // If player is in the air, use gravity
+        if vspeed&lt;= 20 
+        vspeed+=2; 
+        }
+        
+    // collision with wall
+
+    if position_meeting(x, y+yoffset, obj_solid_ground) {
+        var cal = instance_position(x, y+yoffset, obj_solid_ground);
+        y= cal.y-yoffset * 2;
+        if vspeed &gt;0 vspeed=0; 
+        enemyGravity=1;
+    }
+    if !position_meeting(x, y+yoffset, obj_solid_ground) &amp;&amp; enemyGravity=1  enemyGravity=0; 
+    
+    if position_meeting(x, y-yoffset, obj_solid_ground) {
+       if vspeed&lt;0 vspeed=0;
+       var cal2 = instance_position(x, y-yoffset, obj_solid_ground);
+       y= cal2.y+yoffset * 2;
+    }
+    if position_meeting(x-xoffset, y, obj_solid_ground) {
+       if hspeed&lt;0 hspeed=0;
+       var cal3 = instance_position(x-xoffset, y, obj_solid_ground);
+    }
+    if position_meeting(x+xoffset, y, obj_solid_ground) {
+       if hspeed&gt;0 hspeed=0;
+       var cal3 = instance_position(x+xoffset, y, obj_solid_ground);
+    }
+            
+        
+        
+}
+
+
+
+
+
+
+
+
 </string>
           </argument>
         </arguments>
