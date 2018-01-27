@@ -14,7 +14,10 @@ if(speed<=4){
     hspeed += hspd/10; 
     if(speed>4){ 
         hspeed -= hspd/10; 
-    } 
+    }
+    if(name == "wolf"){
+        sprite_index = spr_enemy;
+    }
 }
 if(name == "bat"){
     if(speed<=4){ 

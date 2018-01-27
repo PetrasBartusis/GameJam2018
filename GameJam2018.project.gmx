@@ -11,6 +11,7 @@
     <sprite>sprites\spr_glow</sprite>
     <sprite>sprites\spr_solid_ground</sprite>
     <sprite>sprites\spr_enemy</sprite>
+    <sprite>sprites\spr_enemy_idle</sprite>
     <sprite>sprites\spr_button</sprite>
     <sprite>sprites\spr_sky</sprite>
     <sprite>sprites\spr_tree</sprite>
@@ -51,6 +52,7 @@
     <script>scripts\src_exit_game.gml</script>
     <script>scripts\src_start_game.gml</script>
     <script>scripts\src_main_menu.gml</script>
+    <script>scripts\scr_shake_camera.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_input</object>

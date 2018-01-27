@@ -201,6 +201,7 @@ if place_meeting(x, y, obj_enemy) {
     if y-10 &gt; enemy1.y vspeed=+5;
     enemy1.state=scr_enemy_idle_state;
     hp-=10;
+    scr_shake_camera();
 }
 
 glow_size=hp/30
