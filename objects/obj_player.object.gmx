@@ -35,10 +35,11 @@ playerGravity=0 // If = 0 player is in the air
 glow_size = 1;
 hp=100;
 movement = IDLE;
-/*sprites[IDLE]
-sprites[MOVE]
-sprites[JUMP]
-*/
+sprites[IDLE]=spr_player_idle;
+sprites[MOVE]=spr_player_move;
+sprites[JUMP]=spr_player_jump;
+sprites[CROUCH]=spr_player_idle;
+
 xoffset=25; // x offset for collisions
 yoffset=25;
 
@@ -110,11 +111,13 @@ if(instance_exists(obj_input)){
 if(instance_exists(obj_input)){
     if obj_input.left_key {
         hspeed-=acSpeed;
+        movement=MOVE;
         if speed &gt; maxSpeed 
             speed-=acSpeed;
     }
     if obj_input.right_key {
         hspeed+=acSpeed;
+        movement=MOVE;
         if speed &gt; maxSpeed 
             speed-=acSpeed;
     }
@@ -132,9 +135,14 @@ scr_camera_movement();
 
 // jump
 
-if keyboard_check(ord("W")) &amp;&amp; playerGravity =1 {
+if keyboard_check(ord("W")) &amp;&amp; playerGravity = 1 {
     vspeed=-25;
+    movement=JUMP;
     playerGravity =0;
+}
+
+if(speed &lt; 0.1 and speed &gt; -0.1){
+    movement=IDLE;
 }
 
 // gravity
@@ -142,6 +150,7 @@ if keyboard_check(ord("W")) &amp;&amp; playerGravity =1 {
 if playerGravity = 0 { // If player is in the air, use gravity
     if vspeed&lt;= 20 
         vspeed+=2; 
+        movement=JUMP;
 }
 
 // collision with wall
@@ -189,6 +198,14 @@ if hp &lt;= 0 room_goto(end_game);  // end game
 scr_camera_movement();
 
 scr_flicker_light();
+
+//set the player sprites according to the movement
+sprite_index = sprites[movement];
+
+//turn the enemy towards the player and check if it's not 0
+if(hspeed != 0){
+    image_xscale = sign(hspeed);
+}
 
 //move the backgrounds (parallax)
 background_x[0] = view_xview/1.2;

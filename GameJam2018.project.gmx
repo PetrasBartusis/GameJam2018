@@ -69,10 +69,11 @@
     <room>rooms\end_game</room>
     <room>rooms\game</room>
   </rooms>
-  <constants number="3">
+  <constants number="4">
     <constant name="IDLE">0</constant>
     <constant name="MOVE">1</constant>
     <constant name="JUMP">2</constant>
+    <constant name="CROUCH">3</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
