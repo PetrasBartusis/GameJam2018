@@ -201,6 +201,7 @@ if(obj_input.down_key and playerGravity==1 and speed &lt; 3.7){
     alarm[1] = room_speed*5
 } else if(obj_input.down_key and playerGravity == 1 and alarm[1]&gt;0 and speed &gt;= 3.7){
     movement = DASH;
+    audio_play_sound(snd_dash, 10, false);
     hspeed-=hspeed/7;
 } else if(speed &lt; 3.7){
     movement=IDLE;

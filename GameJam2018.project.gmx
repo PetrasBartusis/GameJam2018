@@ -13,6 +13,8 @@
     <sound>sound\snd_run</sound>
     <sound>sound\snd_hit</sound>
     <sound>sound\snd_jump</sound>
+    <sound>sound\snd_dash</sound>
+    <sound>sound\snd_lit</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_ground</sprite>
@@ -111,7 +113,6 @@
     <object>objects\obj_old_man</object>
     <object>objects\obj_woman</object>
     <object>objects\obj_girl</object>
-    <object>objects\obj_PLAJERYTO</object>
     <object>objects\obj_audio</object>
   </objects>
   <rooms name="rooms">
