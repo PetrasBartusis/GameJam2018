@@ -26,15 +26,15 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialise the enemy
-image_speed = .1;
-spd = 6;
+image_speed = .2;
+spd = 8;
 state = scr_enemy_idle_state;
 alarm[0] = room_speed*irandom_range(2,5);
 sight = 300;
 xaxis = 0;
 yaxis = 0;
 name = "wolf";
-enemyGravity=0 // gravity
+enemyGravity=0; // gravity
 xoffset=25;
 yoffset=25;
 </string>
