@@ -107,12 +107,14 @@ if(instance_exists(obj_input)){
 
 if(instance_exists(obj_input)){
     if obj_input.left_key {
-    hspeed-=acSpeed;
-    if speed &gt; maxSpeed speed-=acSpeed;
+        hspeed-=acSpeed;
+        if speed &gt; maxSpeed 
+            speed-=acSpeed;
     }
     if obj_input.right_key {
-    hspeed+=acSpeed;
-    if speed &gt; maxSpeed speed-=acSpeed;
+        hspeed+=acSpeed;
+        if speed &gt; maxSpeed 
+            speed-=acSpeed;
     }
 }
 
@@ -128,17 +130,18 @@ vspeed=-20;
 // gravity
 
 if playerGravity = 0 { // If player is in the air, use gravity
-if vspeed&lt;= 20 vspeed+=2; 
+    if vspeed&lt;= 20 
+        vspeed+=2; 
 }
 
 if place_meeting(x, y+20, obj_solid_ground) { // IF touching ground, player stands on ground and gravity is off
-if playerGravity=0 {
-var colision1;
-colision1 = instance_nearest(x,y,obj_solid_ground);
-y=colision1.y-40
-}
-playerGravity=1; // gravitacija išjungta
-if vspeed &gt;0 vspeed=0; // solid ground for collisions
+    if playerGravity=0 {
+        var colision1;
+        colision1 = instance_nearest(x,y,obj_solid_ground);
+        y=colision1.y-40
+    }
+    playerGravity=1; // gravitacija išjungta
+    if vspeed &gt;0 vspeed=0; // solid ground for collisions
 }
 
 if !place_meeting(x, y+20, obj_solid_ground) &amp;&amp; playerGravity=1  playerGravity=0; // If not touching, turn on gravity
@@ -147,15 +150,14 @@ if !place_meeting(x, y+20, obj_solid_ground) &amp;&amp; playerGravity=1  playerG
 // enemy collision
 
 if place_meeting(x, y, obj_enemy) {
-var enemy1= instance_nearest(x,y,obj_enemy);
-if enemy1.x &gt; x hspeed=-5;
-if enemy1.x &gt; x enemy1.hspeed=5;
-if enemy1.x &lt; x hspeed=+5;
-if enemy1.x &lt; x enemy1.hspeed=-5;
-if y+10 &lt; enemy1.y vspeed=-20;
-enemy1.state=scr_enemy_idle_state;
-hp-=10;
-
+    var enemy1= instance_nearest(x,y,obj_enemy);
+    if enemy1.x &gt; x hspeed=-5;
+    if enemy1.x &gt; x enemy1.hspeed=5;
+    if enemy1.x &lt; x hspeed=+5;
+    if enemy1.x &lt; x enemy1.hspeed=-5;
+    if y+10 &lt; enemy1.y vspeed=-20;
+    enemy1.state=scr_enemy_idle_state;
+    hp-=10;
 }
 
 
