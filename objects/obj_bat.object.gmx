@@ -30,6 +30,9 @@ yaxis = 0;
 sight = 360; 
 name = "bat";
 shouldFlyUp = false;
+
+
+
 </string>
           </argument>
         </arguments>

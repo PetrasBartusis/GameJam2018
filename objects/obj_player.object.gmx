@@ -39,8 +39,8 @@ movement = IDLE;
 sprites[MOVE]
 sprites[JUMP]
 */
-xoffset=25; // x offset for collisions
-yoffset=25;
+xoffset=10; // x offset for collisions
+yoffset=26;
 
 </string>
           </argument>
@@ -148,7 +148,7 @@ if playerGravity = 0 { // If player is in the air, use gravity
 
 if position_meeting(x, y+yoffset, obj_solid_ground) {
     var cal = instance_position(x, y+yoffset, obj_solid_ground);
-    y= cal.y-yoffset * 2;
+    y= cal.y-(yoffset + 25);
     if vspeed &gt;0 vspeed=0; 
     playerGravity=1;
 }
