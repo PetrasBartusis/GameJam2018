@@ -9,7 +9,7 @@
   <bboxmode>0</bboxmode>
   <bbox_left>52</bbox_left>
   <bbox_right>74</bbox_right>
-  <bbox_top>16</bbox_top>
+  <bbox_top>22</bbox_top>
   <bbox_bottom>68</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
@@ -21,6 +21,5 @@
   <height>100</height>
   <frames>
     <frame index="0">images\spr_player_crouch_0.png</frame>
-    <frame index="1">images\spr_player_crouch_1.png</frame>
   </frames>
 </sprite>

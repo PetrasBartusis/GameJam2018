@@ -38,7 +38,7 @@ movement = IDLE;
 sprites[IDLE]=spr_player_idle;
 sprites[MOVE]=spr_player_move;
 sprites[JUMP]=spr_player_jump;
-sprites[CROUCH]=spr_player_idle;
+sprites[CROUCH]=spr_player_crouch;
 
 xoffset=25; // x offset for collisions
 yoffset=25;
@@ -151,6 +151,11 @@ if playerGravity = 0 { // If player is in the air, use gravity
     if vspeed&lt;= 20 
         vspeed+=2; 
         movement=JUMP;
+}
+
+if(obj_input.down_key and playerGravity=1){
+    hspeed = 0;
+    movement = CROUCH;
 }
 
 // collision with wall
