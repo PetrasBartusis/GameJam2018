@@ -13,8 +13,12 @@
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_bat</sprite>
     <sprite>sprites\spr_button</sprite>
+    <sprite>sprites\spr_sky</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_sky</background>
+    <background>background\mountains</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_get_input.gml</script>
