@@ -162,7 +162,7 @@ if place_meeting(x, y, obj_enemy) {
 
 
 
-
+if hp &lt; 0 hp=0;  // HP reseting to 0 after going to minus
 
 scr_camera_movement();
 
