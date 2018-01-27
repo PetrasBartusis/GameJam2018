@@ -23,8 +23,8 @@ if(name == "bat"){
             vspeed -= vspd/10;
         } 
     }
-    if(y>room_height/2+150){
-        y=room_height/2+150;
+    if(y>room_height/2+127){
+        y=room_height/2+128;
         vspeed = 0;
         shouldFlyUp = true;
     }
