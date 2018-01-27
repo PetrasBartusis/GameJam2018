@@ -1,5 +1,5 @@
 ///scr_move_axis
-
+friction=0.5
 //get a direction
 var dir = point_direction(0, 0, xaxis, yaxis);
 //get directional speed
@@ -10,21 +10,50 @@ if(hspd != 0){
     image_xscale = sign(hspd);
 }
 //move enemy object
-if(speed<=4){ 
-    hspeed += hspd/10; 
-    if(speed>4){ 
-        hspeed -= hspd/10; 
-    }
-    if(name == "wolf"){
-        sprite_index = spr_enemy;
+if(name == "wolf"){
+    if(speed<=9.2){ 
+        hspeed += hspd/10; 
+        if(speed>9.2){ 
+            hspeed -= hspd/10; 
+        }
+        if(name == "wolf"){
+            sprite_index = spr_enemy;
+        }
     }
 }
 if(name == "bat"){
-    if(speed<=4){ 
-        vspeed += vspd/10; 
-        if(speed>4){ 
-            vspeed -= vspd/10;
-        } 
+    if(hspd > 0){
+        if(speed<=8){ 
+            hspeed += hspd/10; 
+            if(speed>8){ 
+                hspeed -= hspd/10; 
+            }
+            if(name == "wolf"){
+                sprite_index = spr_enemy;
+            }
+        }
+        if(speed<=8){ 
+            vspeed += vspd/10; 
+            if(speed>8){ 
+                vspeed -= vspd/10;
+            } 
+        }   
+    } else {
+        if(speed<=15){ 
+            hspeed += hspd/10; 
+            if(speed>15){ 
+                hspeed -= hspd/10; 
+            }
+            if(name == "wolf"){
+                sprite_index = spr_enemy;
+            }
+        }
+        if(speed<=15){ 
+            vspeed += vspd/10; 
+            if(speed>15){ 
+                vspeed -= vspd/10;
+            } 
+        }
     }
     if(y>room_height/2+127){
         y=room_height/2+128;

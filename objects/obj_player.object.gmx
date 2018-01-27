@@ -184,10 +184,6 @@ if keyboard_check(ord("W")) &amp;&amp; playerGravity = 1 {
     audio_play_sound(snd_jump, 10, false);
 }
 
-if(speed &lt; 0.1 and speed &gt; -0.1){
-    movement=IDLE;
-}
-
 // gravity
 
 if playerGravity = 0 { // If player is in the air, use gravity
@@ -196,16 +192,18 @@ if playerGravity = 0 { // If player is in the air, use gravity
         movement=JUMP;
 }
 
-if(obj_input.down_key and playerGravity==1 and (hspeed&lt;0.4 and hspeed&gt;-0.4)){
+if(obj_input.down_key and playerGravity==1 and speed &lt; 3.7){
     hspeed = 0;
     movement = CROUCH;
-} else if(obj_input.down_key and playerGravity == 1 and alarm[1]&lt;=0) {
+} else if(obj_input.down_key and playerGravity == 1 and alarm[1]&lt;=0 and speed &gt;= 3.7) {
     hspeed += 1;
     movement = DASH;
     alarm[1] = room_speed*5
-} else if(obj_input.down_key and playerGravity == 1 and alarm[1]&gt;0){
+} else if(obj_input.down_key and playerGravity == 1 and alarm[1]&gt;0 and speed &gt;= 3.7){
     movement = DASH;
     hspeed-=hspeed/7;
+} else if(speed &lt; 3.7){
+    movement=IDLE;
 }
 
 // collision with wall
@@ -300,6 +298,7 @@ background_x[3] = view_xview/1.5;
           <argument>
             <kind>1</kind>
             <string>hp=103
+hspeed=-1
 </string>
           </argument>
         </arguments>

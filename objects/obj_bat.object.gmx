@@ -27,9 +27,10 @@
             <kind>1</kind>
             <string>event_inherited(); 
 yaxis = 0; 
-sight = 360; 
+sight = 450; 
 name = "bat";
 shouldFlyUp = false;
+spd=15
 
 
 

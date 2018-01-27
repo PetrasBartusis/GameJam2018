@@ -74,6 +74,9 @@ image_speed=0.1
           <argument>
             <kind>1</kind>
             <string>sprite_index=spr_bonfire_on
+if(!is_lit){
+    alarm[0]=room_speed*3
+}
 is_lit=true
 with(obj_enemy) {
     instance_destroy()
@@ -81,7 +84,6 @@ with(obj_enemy) {
 with(obj_person){
     is_celebrating=true
 }
-alarm[0]=room_speed*3
 </string>
           </argument>
         </arguments>
