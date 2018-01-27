@@ -8,6 +8,11 @@
   <sprites name="sprites">
     <sprite>sprites\spr_ground</sprite>
     <sprite>sprites\sprite1</sprite>
+    <sprite>sprites\sprite2</sprite>
+    <sprite>sprites\jump</sprite>
+    <sprite>sprites\boop</sprite>
+    <sprite>sprites\cr</sprite>
+    <sprite>sprites\idle</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
