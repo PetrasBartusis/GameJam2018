@@ -19,6 +19,11 @@
     <sprite>sprites\sprite11</sprite>
     <sprite>sprites\spr_bush2</sprite>
     <sprite>sprites\sprite12</sprite>
+    <sprite>sprites\sprite2</sprite>
+    <sprite>sprites\jump</sprite>
+    <sprite>sprites\boop</sprite>
+    <sprite>sprites\cr</sprite>
+    <sprite>sprites\idle</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mntn</background>
