@@ -35,6 +35,12 @@ playerGravity=0 // If = 0 player is in the air
 glow_size = 1;
 hp=100;
 movement = IDLE;
+/*sprites[IDLE]
+sprites[MOVE]
+sprites[JUMP]
+*/
+xoffset=10; // x offset for collisions
+yoffset=26;
 sprites[IDLE]=spr_player_idle;
 sprites[MOVE]=spr_player_move;
 sprites[JUMP]=spr_player_jump;
@@ -162,7 +168,7 @@ if(obj_input.down_key and playerGravity=1){
 
 if position_meeting(x, y+yoffset, obj_solid_ground) {
     var cal = instance_position(x, y+yoffset, obj_solid_ground);
-    y= cal.y-yoffset * 2;
+    y= cal.y-(yoffset + 25);
     if vspeed &gt;0 vspeed=0; 
     playerGravity=1;
 }
@@ -199,7 +205,7 @@ if place_meeting(x, y, obj_enemy) {
 
 glow_size=hp/30
 
-if hp &lt;= 0 room_goto(end_game);  // end game
+if hp &lt;= 0 room_goto(lose_game);  // end game
 scr_camera_movement();
 
 scr_flicker_light();

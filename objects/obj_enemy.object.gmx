@@ -35,8 +35,8 @@ xaxis = 0;
 yaxis = 0;
 name = "wolf";
 enemyGravity=0; // gravity
-xoffset=25;
-yoffset=25;
+xoffset=43;
+yoffset=23;
 </string>
           </argument>
         </arguments>
@@ -124,7 +124,7 @@ if name = "wolf" {
 
     if position_meeting(x, y+yoffset, obj_solid_ground) {
         var cal = instance_position(x, y+yoffset, obj_solid_ground);
-        y= cal.y-yoffset * 2;
+        y= cal.y-(25 + yoffset);
         if vspeed &gt;0 vspeed=0; 
         enemyGravity=1;
     }
