@@ -26,6 +26,8 @@
     <sprite>sprites\spr_bat</sprite>
     <sprite>sprites\spr_player_idle</sprite>
     <sprite>sprites\spr_player_crouch</sprite>
+    <sprite>sprites\spr_bonfire_on</sprite>
+    <sprite>sprites\spr_bonfire_off</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mntn</background>
@@ -68,7 +70,7 @@
       <object>objects\obj_normal</object>
       <object>objects\obj_hard</object>
     </objects>
-    <object>objects\bonfire</object>
+    <object>objects\obj_bonfire</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\menu</room>
