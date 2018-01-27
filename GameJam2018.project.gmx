@@ -14,10 +14,12 @@
     <sprite>sprites\spr_bat</sprite>
     <sprite>sprites\spr_button</sprite>
     <sprite>sprites\spr_sky</sprite>
+    <sprite>sprites\spr_tree</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mntn</background>
     <background>background\bg_sky</background>
+    <background>background\bg_gr</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
