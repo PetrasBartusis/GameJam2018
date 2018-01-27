@@ -46,8 +46,8 @@ sprites[MOVE]=spr_player_move;
 sprites[JUMP]=spr_player_jump;
 sprites[CROUCH]=spr_player_idle;
 
-xoffset=25; // x offset for collisions
-yoffset=25;
+xoffset=10; // x offset for collisions
+yoffset=26;
 
 </string>
           </argument>
