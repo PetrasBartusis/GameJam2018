@@ -135,34 +135,28 @@ if vspeed &gt;0 vspeed=0; // solid ground for collisions
 if !place_meeting(x, y+20, obj_solid_ground) &amp;&amp; playerGravity=1  playerGravity=0; // If not touching, turn on gravity
 
 
+// enemy collision
+
+if place_meeting(x, y, obj_enemy) {
+var enemy1= instance_nearest(x,y,obj_enemy);
+if enemy1.x &gt; x hspeed=-5;
+if enemy1.x &gt; x enemy1.hspeed=5;
+if enemy1.x &lt; x hspeed=+5;
+if enemy1.x &lt; x enemy1.hspeed=-5;
+if y+10 &lt; enemy1.y vspeed=-20;
+enemy1.state=scr_enemy_idle_state;
+hp-=10;
+
+}
+
+
+
+
 
 scr_camera_movement();
 
 scr_flicker_light();
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_player">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Collide
 </string>
           </argument>
         </arguments>
