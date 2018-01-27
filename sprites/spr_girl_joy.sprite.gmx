@@ -7,10 +7,10 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>4</bbox_left>
-  <bbox_right>98</bbox_right>
-  <bbox_top>39</bbox_top>
-  <bbox_bottom>89</bbox_bottom>
+  <bbox_left>49</bbox_left>
+  <bbox_right>72</bbox_right>
+  <bbox_top>15</bbox_top>
+  <bbox_bottom>51</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -20,6 +20,8 @@
   <width>100</width>
   <height>100</height>
   <frames>
-    <frame index="0">images\sprite12_0.png</frame>
+    <frame index="0">images\spr_girl_joy_0.png</frame>
+    <frame index="1">images\spr_girl_joy_1.png</frame>
+    <frame index="2">images\spr_girl_joy_2.png</frame>
   </frames>
 </sprite>

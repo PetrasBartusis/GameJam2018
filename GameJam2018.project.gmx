@@ -21,7 +21,6 @@
     <sprite>sprites\spr_bush4</sprite>
     <sprite>sprites\spr_bush2</sprite>
     <sprite>sprites\sprite14</sprite>
-    <sprite>sprites\sprite12</sprite>
     <sprite>sprites\spr_bat</sprite>
     <sprite>sprites\spr_bonfire_on</sprite>
     <sprite>sprites\spr_bonfire_off</sprite>
@@ -43,6 +42,16 @@
       <sprite>sprites\spr_player_jump_2</sprite>
     </sprites>
     <sprite>sprites\spr_house</sprite>
+    <sprites name="villagers">
+      <sprite>sprites\spr_man</sprite>
+      <sprite>sprites\spr_man_joy</sprite>
+      <sprite>sprites\spr_old_man</sprite>
+      <sprite>sprites\spr_old_man_joy</sprite>
+      <sprite>sprites\spr_woman</sprite>
+      <sprite>sprites\spr_woman_joy</sprite>
+      <sprite>sprites\spr_girl</sprite>
+      <sprite>sprites\spr_girl_joy</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mntn</background>
@@ -88,6 +97,11 @@
     </objects>
     <object>objects\obj_bonfire</object>
     <object>objects\obj_house</object>
+    <object>objects\obj_person</object>
+    <object>objects\obj_man</object>
+    <object>objects\obj_old_man</object>
+    <object>objects\obj_woman</object>
+    <object>objects\obj_girl</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\menu</room>
