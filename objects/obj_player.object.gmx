@@ -131,7 +131,7 @@ scr_camera_movement();
 // jump
 
 if keyboard_check(ord("W")) &amp;&amp; playerGravity =1 {
-    vspeed=-20;
+    vspeed=-25;
     playerGravity =0;
 }
 
@@ -176,6 +176,7 @@ if place_meeting(x, y, obj_enemy) {
     if enemy1.x &lt; x hspeed=+5;
     if enemy1.x &lt; x enemy1.hspeed=-5;
     if y+10 &lt; enemy1.y vspeed=-20;
+    if y-10 &gt; enemy1.y vspeed=+5;
     enemy1.state=scr_enemy_idle_state;
     hp-=10;
 }

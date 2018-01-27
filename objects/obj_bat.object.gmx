@@ -28,7 +28,7 @@
             <string>event_inherited(); 
 yaxis = 0; 
 sight = 360; 
-name = "bat"
+name = "bat";
 shouldFlyUp = false;
 </string>
           </argument>
