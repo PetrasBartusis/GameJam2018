@@ -22,13 +22,23 @@
     <sprite>sprites\spr_bush2</sprite>
     <sprite>sprites\sprite14</sprite>
     <sprite>sprites\sprite12</sprite>
-    <sprite>sprites\spr_player_move</sprite>
-    <sprite>sprites\spr_player_jump</sprite>
     <sprite>sprites\spr_bat</sprite>
-    <sprite>sprites\spr_player_idle</sprite>
-    <sprite>sprites\spr_player_crouch</sprite>
     <sprite>sprites\spr_bonfire_on</sprite>
     <sprite>sprites\spr_bonfire_off</sprite>
+    <sprites name="player_spr">
+      <sprite>sprites\spr_player_move_0</sprite>
+      <sprite>sprites\spr_player_move_1</sprite>
+      <sprite>sprites\spr_player_move_2</sprite>
+      <sprite>sprites\spr_player_idle_0</sprite>
+      <sprite>sprites\spr_player_idle_1</sprite>
+      <sprite>sprites\spr_player_idle_2</sprite>
+      <sprite>sprites\spr_player_crouch_0</sprite>
+      <sprite>sprites\spr_player_crouch_1</sprite>
+      <sprite>sprites\spr_player_crouch_2</sprite>
+      <sprite>sprites\spr_player_jump_0</sprite>
+      <sprite>sprites\spr_player_jump_1</sprite>
+      <sprite>sprites\spr_player_jump_2</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mntn</background>
