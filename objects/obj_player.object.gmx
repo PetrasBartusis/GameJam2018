@@ -57,6 +57,7 @@ hp=100;
           <argument>
             <kind>1</kind>
             <string>hp-=1; //TODO: dificulty- e=1, m=2, h=3; Room ends in about 25s
+glow_size=hp/100
 </string>
           </argument>
         </arguments>
@@ -185,6 +186,7 @@ scr_flicker_light();
           <argument>
             <kind>1</kind>
             <string>draw_text(20, 64, hp)
+draw_text(60, 64, glow_size)
 </string>
           </argument>
         </arguments>
