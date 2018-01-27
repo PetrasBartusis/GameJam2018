@@ -59,6 +59,7 @@ sprites[DASH, LIGHT_2]=spr_player_dash_2;
 
 xoffset=10; // x offset for collisions
 yoffset=26;
+atr=0; // audio trigger
 
 </string>
           </argument>
@@ -179,6 +180,8 @@ if keyboard_check(ord("W")) &amp;&amp; playerGravity = 1 {
     vspeed=-25;
     movement=JUMP;
     playerGravity =0;
+    atr=0;
+    audio_play_sound(snd_jump, 10, false);
 }
 
 if(speed &lt; 0.1 and speed &gt; -0.1){
@@ -212,6 +215,10 @@ if position_meeting(x, y+yoffset, obj_solid_ground) {
     y= cal.y-(yoffset + 25);
     if vspeed &gt;0 vspeed=0; 
     playerGravity=1;
+    if atr =0 {
+    audio_play_sound(snd_land, 10, false);
+    atr=1;
+    }
 }
 if !position_meeting(x, y+yoffset, obj_solid_ground) &amp;&amp; playerGravity=1  playerGravity=0; 
 
@@ -233,6 +240,7 @@ if position_meeting(x+xoffset, y, obj_solid_ground) {
 // enemy collision
 
 if place_meeting(x, y, obj_enemy) {
+    audio_play_sound(snd_hit, 10, false);
     var enemy1= instance_nearest(x,y,obj_enemy);
     if enemy1.x &gt; x hspeed=-5;
     if enemy1.x &gt; x enemy1.hspeed=5;

@@ -4,7 +4,16 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_land</sound>
+    <sound>sound\snd_music1</sound>
+    <sound>sound\snd_music2</sound>
+    <sound>sound\snd_music3</sound>
+    <sound>sound\snd_music4</sound>
+    <sound>sound\snd_run</sound>
+    <sound>sound\snd_hit</sound>
+    <sound>sound\snd_jump</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_ground</sprite>
     <sprite>sprites\sprite1</sprite>
@@ -102,6 +111,8 @@
     <object>objects\obj_old_man</object>
     <object>objects\obj_woman</object>
     <object>objects\obj_girl</object>
+    <object>objects\obj_PLAJERYTO</object>
+    <object>objects\obj_audio</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\menu</room>
