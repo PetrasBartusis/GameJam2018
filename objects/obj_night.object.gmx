@@ -82,7 +82,12 @@ if(room == game){
     
     with(obj_player){
         draw_set_blend_mode(bm_src_color);
-        draw_sprite_ext(spr_glow, 0, x, y, glow_size, glow_size, 0, c_white, .7);
+        if(image_xscale&gt;=0){
+            var xoffset = x + 12
+        } else {
+            var xoffset = x - 12
+        }
+        draw_sprite_ext(spr_glow, 0, xoffset, y-8, glow_size, glow_size, 0, c_white, .7);
         draw_set_blend_mode(bm_normal);
     }
     with(obj_bonfire){

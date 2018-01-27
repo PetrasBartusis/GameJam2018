@@ -43,20 +43,46 @@ sprites[IDLE, LIGHT_0]=spr_player_idle_0;
 sprites[MOVE, LIGHT_0]=spr_player_move_0;
 sprites[JUMP, LIGHT_0]=spr_player_jump_0;
 sprites[CROUCH, LIGHT_0]=spr_player_crouch_0;
+sprites[DASH, LIGHT_0]=spr_player_dash_0;
 
 sprites[IDLE, LIGHT_1]=spr_player_idle_1;
 sprites[MOVE, LIGHT_1]=spr_player_move_1;
 sprites[JUMP, LIGHT_1]=spr_player_jump_1;
 sprites[CROUCH, LIGHT_1]=spr_player_crouch_1;
+sprites[DASH, LIGHT_1]=spr_player_dash_1;
 
 sprites[IDLE, LIGHT_2]=spr_player_idle_2;
 sprites[MOVE, LIGHT_2]=spr_player_move_2;
 sprites[JUMP, LIGHT_2]=spr_player_jump_2;
 sprites[CROUCH, LIGHT_2]=spr_player_crouch_2;
+sprites[DASH, LIGHT_2]=spr_player_dash_2;
 
 xoffset=10; // x offset for collisions
 yoffset=26;
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///DashAlarmCD
 </string>
           </argument>
         </arguments>
@@ -167,9 +193,16 @@ if playerGravity = 0 { // If player is in the air, use gravity
         movement=JUMP;
 }
 
-if(obj_input.down_key and playerGravity=1){
+if(obj_input.down_key and playerGravity==1 and (hspeed&lt;0.4 and hspeed&gt;-0.4)){
     hspeed = 0;
     movement = CROUCH;
+} else if(obj_input.down_key and playerGravity == 1 and alarm[1]&lt;=0) {
+    hspeed += 1;
+    movement = DASH;
+    alarm[1] = room_speed*5
+} else if(obj_input.down_key and playerGravity == 1 and alarm[1]&gt;0){
+    movement = DASH;
+    hspeed-=hspeed/7;
 }
 
 // collision with wall
@@ -214,7 +247,7 @@ if place_meeting(x, y, obj_enemy) {
 
 glow_size=hp/30;
 
-current_light = hp/34;
+current_light = hp/35;
 
 
 if hp &lt;= 0 room_goto(lose_game);  // end game

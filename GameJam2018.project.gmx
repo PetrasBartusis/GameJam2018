@@ -33,6 +33,9 @@
       <sprite>sprites\spr_player_idle_1</sprite>
       <sprite>sprites\spr_player_idle_2</sprite>
       <sprite>sprites\spr_player_crouch_0</sprite>
+      <sprite>sprites\spr_player_dash_0</sprite>
+      <sprite>sprites\spr_player_dash_1</sprite>
+      <sprite>sprites\spr_player_dash_2</sprite>
       <sprite>sprites\spr_player_crouch_1</sprite>
       <sprite>sprites\spr_player_crouch_2</sprite>
       <sprite>sprites\spr_player_jump_0</sprite>
@@ -92,7 +95,8 @@
     <room>rooms\win_game</room>
     <room>rooms\game</room>
   </rooms>
-  <constants number="7">
+  <constants number="8">
+    <constant name="DASH">4</constant>
     <constant name="IDLE">0</constant>
     <constant name="MOVE">1</constant>
     <constant name="JUMP">2</constant>
