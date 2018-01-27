@@ -12,6 +12,7 @@
     <sprite>sprites\spr_solid_ground</sprite>
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_bat</sprite>
+    <sprite>sprites\spr_button</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -28,6 +29,9 @@
       <script>scripts\scr_enemy_chase_state.gml</script>
     </scripts>
     <script>scripts\empty_script_test.gml</script>
+    <script>scripts\src_exit_game.gml</script>
+    <script>scripts\src_start_game.gml</script>
+    <script>scripts\src_main_menu.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_input</object>
@@ -36,9 +40,19 @@
     <object>objects\obj_solid_ground</object>
     <object>objects\obj_enemy</object>
     <object>objects\obj_bat</object>
+    <objects name="UI">
+      <object>objects\obj_button_parent</object>
+      <object>objects\obj_start</object>
+      <object>objects\obj_main_menu</object>
+      <object>objects\obj_exit</object>
+      <object>objects\obj_easy</object>
+      <object>objects\obj_normal</object>
+      <object>objects\obj_hard</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\menu</room>
+    <room>rooms\game</room>
   </rooms>
   <constants number="3">
     <constant name="IDLE">0</constant>
