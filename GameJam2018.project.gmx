@@ -17,7 +17,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bg_sky</background>
-    <background>background\mountains</background>
+    <background>background\bg_mountain</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
