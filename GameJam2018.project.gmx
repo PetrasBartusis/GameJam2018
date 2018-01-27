@@ -15,6 +15,10 @@
     <sprite>sprites\spr_button</sprite>
     <sprite>sprites\spr_sky</sprite>
     <sprite>sprites\spr_tree</sprite>
+    <sprite>sprites\spr_bush</sprite>
+    <sprite>sprites\sprite11</sprite>
+    <sprite>sprites\spr_bush2</sprite>
+    <sprite>sprites\sprite12</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mntn</background>
