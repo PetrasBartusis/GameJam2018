@@ -58,6 +58,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\menu</room>
+    <room>rooms\end_game</room>
     <room>rooms\game</room>
   </rooms>
   <constants number="3">

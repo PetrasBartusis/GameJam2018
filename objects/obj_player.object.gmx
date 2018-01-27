@@ -67,7 +67,6 @@ yoffset=25;
             <string>if(hp&gt;0){ 
     hp-=1; //TODO: dificulty- e=1, m=2, h=3; Room ends in about 25s
 }
-glow_size=hp/100
 </string>
           </argument>
         </arguments>
@@ -184,10 +183,9 @@ if place_meeting(x, y, obj_enemy) {
     hp-=10;
 }
 
+glow_size=hp/30
 
-
-if hp &lt; 0 hp=0;  // HP reseting to 0 after going to minus
-
+if hp &lt; 0 room_goto(end_game);  // end game
 scr_camera_movement();
 
 scr_flicker_light();
