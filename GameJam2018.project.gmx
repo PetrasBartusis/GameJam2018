@@ -63,10 +63,12 @@
       <object>objects\obj_normal</object>
       <object>objects\obj_hard</object>
     </objects>
+    <object>objects\bonfire</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\menu</room>
-    <room>rooms\end_game</room>
+    <room>rooms\lose_game</room>
+    <room>rooms\win_game</room>
     <room>rooms\game</room>
   </rooms>
   <constants number="4">

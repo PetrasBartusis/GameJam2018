@@ -200,7 +200,7 @@ if place_meeting(x, y, obj_enemy) {
 
 glow_size=hp/30
 
-if hp &lt;= 0 room_goto(end_game);  // end game
+if hp &lt;= 0 room_goto(lose_game);  // end game
 scr_camera_movement();
 
 scr_flicker_light();
