@@ -22,7 +22,7 @@ if(name == "wolf"){
     }
 }
 if(name == "bat"){
-    if(hspd > 0){
+    if(hspd > 0 and vspd > 0){
         if(speed<=8){ 
             hspeed += hspd/10; 
             if(speed>8){ 
