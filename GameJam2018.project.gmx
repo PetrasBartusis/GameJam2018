@@ -4,13 +4,25 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_land</sound>
+    <sound>sound\snd_music1</sound>
+    <sound>sound\snd_music2</sound>
+    <sound>sound\snd_music3</sound>
+    <sound>sound\snd_music4</sound>
+    <sound>sound\snd_run</sound>
+    <sound>sound\snd_hit</sound>
+    <sound>sound\snd_jump</sound>
+    <sound>sound\snd_dash</sound>
+    <sound>sound\snd_lit</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_ground</sprite>
     <sprite>sprites\sprite1</sprite>
     <sprite>sprites\spr_glow</sprite>
     <sprite>sprites\spr_solid_ground</sprite>
     <sprite>sprites\spr_enemy</sprite>
+    <sprite>sprites\spr_enemy_idle</sprite>
     <sprite>sprites\spr_button</sprite>
     <sprite>sprites\spr_sky</sprite>
     <sprite>sprites\spr_tree</sprite>
@@ -20,10 +32,39 @@
     <sprite>sprites\spr_bush4</sprite>
     <sprite>sprites\spr_bush2</sprite>
     <sprite>sprites\sprite14</sprite>
-    <sprite>sprites\sprite12</sprite>
-    <sprite>sprites\spr_player_move</sprite>
-    <sprite>sprites\spr_player_jump</sprite>
     <sprite>sprites\spr_bat</sprite>
+    <sprite>sprites\spr_bat_eye_glow</sprite>
+    <sprite>sprites\spr_wolf_eye_glow</sprite>
+    <sprite>sprites\spr_bonfire_on</sprite>
+    <sprite>sprites\spr_bonfire_off</sprite>
+    <sprites name="player_spr">
+      <sprite>sprites\spr_player_move_0</sprite>
+      <sprite>sprites\spr_player_move_1</sprite>
+      <sprite>sprites\spr_player_move_2</sprite>
+      <sprite>sprites\spr_player_idle_0</sprite>
+      <sprite>sprites\spr_player_idle_1</sprite>
+      <sprite>sprites\spr_player_idle_2</sprite>
+      <sprite>sprites\spr_player_crouch_0</sprite>
+      <sprite>sprites\spr_player_dash_0</sprite>
+      <sprite>sprites\spr_player_dash_1</sprite>
+      <sprite>sprites\spr_player_dash_2</sprite>
+      <sprite>sprites\spr_player_crouch_1</sprite>
+      <sprite>sprites\spr_player_crouch_2</sprite>
+      <sprite>sprites\spr_player_jump_0</sprite>
+      <sprite>sprites\spr_player_jump_1</sprite>
+      <sprite>sprites\spr_player_jump_2</sprite>
+    </sprites>
+    <sprite>sprites\spr_house</sprite>
+    <sprites name="villagers">
+      <sprite>sprites\spr_man</sprite>
+      <sprite>sprites\spr_man_joy</sprite>
+      <sprite>sprites\spr_old_man</sprite>
+      <sprite>sprites\spr_old_man_joy</sprite>
+      <sprite>sprites\spr_woman</sprite>
+      <sprite>sprites\spr_woman_joy</sprite>
+      <sprite>sprites\spr_girl</sprite>
+      <sprite>sprites\spr_girl_joy</sprite>
+    </sprites>
     <sprite>sprites\spr_player_idle</sprite>
     <sprite>sprites\spr_player_crouch</sprite>
     <sprite>sprites\Prometheus_gend</sprite>
@@ -37,6 +78,7 @@
     <background>background\bg_gr</background>
     <background>background\bg_trees</background>
     <background>background\bg_bushes</background>
+    <background>background\bg_failed</background>
     <background>background\background5</background>
   </backgrounds>
   <paths name="paths"/>
@@ -56,6 +98,7 @@
     <script>scripts\src_exit_game.gml</script>
     <script>scripts\src_start_game.gml</script>
     <script>scripts\src_main_menu.gml</script>
+    <script>scripts\scr_shake_camera.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_input</object>
@@ -73,7 +116,14 @@
       <object>objects\obj_normal</object>
       <object>objects\obj_hard</object>
     </objects>
-    <object>objects\bonfire</object>
+    <object>objects\obj_bonfire</object>
+    <object>objects\obj_house</object>
+    <object>objects\obj_person</object>
+    <object>objects\obj_man</object>
+    <object>objects\obj_old_man</object>
+    <object>objects\obj_woman</object>
+    <object>objects\obj_girl</object>
+    <object>objects\obj_audio</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\menu</room>
@@ -81,11 +131,15 @@
     <room>rooms\win_game</room>
     <room>rooms\game</room>
   </rooms>
-  <constants number="4">
+  <constants number="8">
+    <constant name="DASH">4</constant>
     <constant name="IDLE">0</constant>
     <constant name="MOVE">1</constant>
     <constant name="JUMP">2</constant>
     <constant name="CROUCH">3</constant>
+    <constant name="LIGHT_0">0</constant>
+    <constant name="LIGHT_1">1</constant>
+    <constant name="LIGHT_2">2</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

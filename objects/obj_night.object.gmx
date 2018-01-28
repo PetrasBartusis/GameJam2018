@@ -82,8 +82,27 @@ if(room == game){
     
     with(obj_player){
         draw_set_blend_mode(bm_src_color);
-        draw_sprite_ext(spr_glow, 0, x, y, glow_size, glow_size, 0, c_white, .7);
+        if(image_xscale&gt;=0){
+            var xoffset = x + 12
+        } else {
+            var xoffset = x - 12
+        }
+        draw_sprite_ext(spr_glow, 0, xoffset, y-8, glow_size, glow_size, 0, c_white, .7);
         draw_set_blend_mode(bm_normal);
+    }
+    with(obj_bonfire){
+        if(is_lit){
+            draw_set_blend_mode(bm_src_color);
+            draw_sprite_ext(spr_glow, 0, x, y, glow_size, glow_size, 0, c_yellow, .7);
+            draw_set_blend_mode(bm_normal);
+        }
+    }
+    with(obj_bat){
+        if(isChasing){
+            draw_set_blend_mode(c_red);
+            draw_sprite_ext(spr_bat_eye_glow, 0, x, y-9 - image_index, 0.3, 0.2, 0, c_red, .5);
+            draw_set_blend_mode(bm_normal);
+        }
     }
     surface_reset_target();
     draw_surface_ext(night_cycle_surf, 0, 0, 1, 1, 0, c_white, 0.8);
