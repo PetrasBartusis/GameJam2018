@@ -65,11 +65,11 @@
       <sprite>sprites\spr_girl</sprite>
       <sprite>sprites\spr_girl_joy</sprite>
     </sprites>
-    <sprite>sprites\spr_player_idle</sprite>
-    <sprite>sprites\spr_player_crouch</sprite>
     <sprite>sprites\Prometheus_gend</sprite>
     <sprite>sprites\spr_ppl</sprite>
     <sprite>sprites\sprite22</sprite>
+    <sprite>sprites\spr_happy_guy</sprite>
+    <sprite>sprites\spr_happy_whamen</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mntn</background>
