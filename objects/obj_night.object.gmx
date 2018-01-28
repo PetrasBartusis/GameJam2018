@@ -87,7 +87,7 @@ if(room == game){
         } else {
             var xoffset = x - 12
         }
-        draw_sprite_ext(spr_glow, 0, xoffset, y-8, glow_size, glow_size, 0, c_white, .7);
+        draw_sprite_ext(spr_glow, 0, xoffset, y-8, glow_size, glow_size, 0, c_orange, .7);
         draw_set_blend_mode(bm_normal);
     }
     with(obj_bonfire){

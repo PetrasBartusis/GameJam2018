@@ -22,43 +22,36 @@ if(name == "wolf"){
     }
 }
 if(name == "bat"){
-    if(hspd > 0 and vspd > 0){
-        if(speed<=8){ 
-            hspeed += hspd/10; 
-            if(speed>8){ 
-                hspeed -= hspd/10; 
-            }
-            if(name == "wolf"){
-                sprite_index = spr_enemy;
-            }
+    maxSpd = 8;
+    if(isChasing){
+        if(hspd < 0){
+            maxSpd = 15;
+        } else if(vspd < 0){
+            maxSpd = 20; //easy 15 medium 20 hard 30
         }
-        if(speed<=8){ 
-            vspeed += vspd/10; 
-            if(speed>8){ 
-                vspeed -= vspd/10;
-            } 
-        }   
     } else {
-        if(speed<=15){ 
-            hspeed += hspd/10; 
-            if(speed>15){ 
-                hspeed -= hspd/10; 
-            }
-            if(name == "wolf"){
-                sprite_index = spr_enemy;
-            }
-        }
-        if(speed<=15){ 
-            vspeed += vspd/10; 
-            if(speed>15){ 
-                vspeed -= vspd/10;
-            } 
+        if(y < 120){
+            yaxis = random_range(0.1, 0.25);
+        } else if(y > 420){
+            yaxis = random_range(-0.1, -0.25);
         }
     }
+    if(speed<=maxSpd){ 
+        hspeed += hspd/10; 
+        if(speed>maxSpd){ 
+            hspeed -= hspd/10; 
+        }
+        vspeed += vspd/10; 
+        if(speed>maxSpd){ 
+            vspeed -= vspd/10;
+        }
+    }
+
     if(y>room_height/2+128){
         y=room_height/2+128;
         vspeed = 0;
         shouldFlyUp = true;
     }
+    
 }
  

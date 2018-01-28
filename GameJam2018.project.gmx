@@ -44,10 +44,10 @@
       <sprite>sprites\spr_player_idle_0</sprite>
       <sprite>sprites\spr_player_idle_1</sprite>
       <sprite>sprites\spr_player_idle_2</sprite>
-      <sprite>sprites\spr_player_crouch_0</sprite>
       <sprite>sprites\spr_player_dash_0</sprite>
       <sprite>sprites\spr_player_dash_1</sprite>
       <sprite>sprites\spr_player_dash_2</sprite>
+      <sprite>sprites\spr_player_crouch_0</sprite>
       <sprite>sprites\spr_player_crouch_1</sprite>
       <sprite>sprites\spr_player_crouch_2</sprite>
       <sprite>sprites\spr_player_jump_0</sprite>
