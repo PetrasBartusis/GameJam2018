@@ -69,6 +69,7 @@
     <sprite>sprites\spr_ppl</sprite>
     <sprite>sprites\sprite22</sprite>
     <sprite>sprites\beginning_screen</sprite>
+    <sprite>sprites\spr_reversed_beggining</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mntn</background>
