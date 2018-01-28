@@ -26,13 +26,18 @@
     <sprite>sprites\spr_bat</sprite>
     <sprite>sprites\spr_player_idle</sprite>
     <sprite>sprites\spr_player_crouch</sprite>
+    <sprite>sprites\Prometheus_gend</sprite>
+    <sprite>sprites\spr_ppl</sprite>
+    <sprite>sprites\sprite22</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_mntn</background>
     <background>background\bg_sky</background>
+    <background>background\goodending</background>
     <background>background\bg_gr</background>
     <background>background\bg_trees</background>
     <background>background\bg_bushes</background>
+    <background>background\background5</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
