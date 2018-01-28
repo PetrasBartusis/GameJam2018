@@ -86,6 +86,7 @@ atr=0; // audio trigger
             <kind>1</kind>
             <string>///set flashing back to false
 flash = false;
+image_alpha = 1;
 </string>
           </argument>
         </arguments>
@@ -276,6 +277,7 @@ if place_meeting(x, y, obj_enemy) {
     hp-=10;
     scr_shake_camera();
     flash = true;
+    image_alpha = 0.5;
     alarm[2] = 3;
 }
 
@@ -374,9 +376,9 @@ draw_text(60, 64, glow_size)
           <argument>
             <kind>1</kind>
             <string>if (flash) {
-   d3d_set_fog(true, c_white, 0, 0);
-   draw_self();
-   d3d_set_fog(false, c_white, 0, 0);
+    d3d_set_fog(true, c_red, 0, 0);
+    draw_self();
+    d3d_set_fog(false, c_red, 0, 0);
 }
 else {
    draw_self();

@@ -97,6 +97,11 @@ if(room == game){
             draw_set_blend_mode(bm_normal);
         }
     }
+    with(obj_bat){
+        draw_set_blend_mode(c_red);
+        draw_sprite_ext(spr_bat_eye_glow, 0, x, y-9 - image_index, 0.5, 0.5, 0, c_red, .7);
+        draw_set_blend_mode(bm_normal);
+    }
     surface_reset_target();
     draw_surface_ext(night_cycle_surf, 0, 0, 1, 1, 0, c_white, 0.8);
 }
