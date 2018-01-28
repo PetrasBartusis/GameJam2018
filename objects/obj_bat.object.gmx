@@ -31,6 +31,7 @@ sight = 450;
 name = "bat";
 shouldFlyUp = false;
 spd=15;
+isChasing = false;
 </string>
           </argument>
         </arguments>

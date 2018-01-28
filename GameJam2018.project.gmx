@@ -34,6 +34,7 @@
     <sprite>sprites\sprite14</sprite>
     <sprite>sprites\spr_bat</sprite>
     <sprite>sprites\spr_bat_eye_glow</sprite>
+    <sprite>sprites\spr_wolf_eye_glow</sprite>
     <sprite>sprites\spr_bonfire_on</sprite>
     <sprite>sprites\spr_bonfire_off</sprite>
     <sprites name="player_spr">

@@ -37,6 +37,7 @@ name = "wolf";
 enemyGravity=0; // gravity
 xoffset=43;
 yoffset=23;
+isChasing = false;
 </string>
           </argument>
         </arguments>
