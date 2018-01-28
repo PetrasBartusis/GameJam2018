@@ -70,6 +70,7 @@
     <sprite>sprites\sprite22</sprite>
     <sprite>sprites\spr_happy_guy</sprite>
     <sprite>sprites\spr_happy_whamen</sprite>
+    <sprite>sprites\sprite51</sprite>
     <sprite>sprites\beginning_screen</sprite>
     <sprite>sprites\spr_reversed_beggining</sprite>
   </sprites>
@@ -82,6 +83,7 @@
     <background>background\bg_bushes</background>
     <background>background\bg_failed</background>
     <background>background\background5</background>
+    <background>background\background8</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
