@@ -70,6 +70,7 @@
     <background>background\bg_gr</background>
     <background>background\bg_trees</background>
     <background>background\bg_bushes</background>
+    <background>background\bg_failed</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">

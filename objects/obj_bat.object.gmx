@@ -30,10 +30,7 @@ yaxis = 0;
 sight = 450; 
 name = "bat";
 shouldFlyUp = false;
-spd=15
-
-
-
+spd=15;
 </string>
           </argument>
         </arguments>
